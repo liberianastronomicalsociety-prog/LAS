@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
  * - Teal, cyan, and gold color palette
  * - Professional yet approachable aesthetic
  * - Accessible and inclusive design
+ * - Astronomical backgrounds for immersive experience
  */
 
 interface CarouselSlide {
@@ -251,35 +252,37 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section with Astronomical Background */}
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+        style={{
+          backgroundImage: `url('https://private-us-east-1.manuscdn.com/sessionFile/32ZuFWbSfwVMisoEWJT3nk/sandbox/Tdz799sqIzgcYWPPqqX3C4-img-1_1770660769000_na1fn_aGVyby1zcGFjZS1iYWNrZ3JvdW5k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMzJadUZXYlNmd1ZNaXNvRVdKVDNuay9zYW5kYm94L1Rkejc5OXNxSXpnY1lXUFBxcVgzQzQtaW1nLTFfMTc3MDY2MDc2OTAwMF9uYTFmbl9hR1Z5YnkxemNHRmpaUzFpWVdOclozSnZkVzVrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=W8hy3824mIT1tFOCSmnTPlQKBjdmsfAgOAhP25fucPqdSMDTtabDR6hNyhYGyhmf~BiLl6oAnL2nhZfBC7gBrCZ~qBccjd6iGjXgzFzh9A63cc0BpEyXnNvVH8ikKZe2Uu~7VCg60bMknOdgCZ65r7V6xINTff7FLfCT7mF0MAWCiSpN0MZLAagDf~6y-QPNL9~tng6sbNrAHVyYElnV2mR3xFD1UhW1PhGjQnt-oHeujL-ODH4qPSc-EeP8jnJ3ONbXfbFJRf1OdeR2QhXHvWLKdrtTVpU12e0dHJSyn-NcMPqHNXobDJxHo-K7Q6okCLHiwD8hO9C22xNOEGMtSA__')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
       >
-        {/* Animated Background */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-orange-200/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-cyan-900/30 to-teal-900/50"></div>
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="space-y-8 animate-fade-in">
-            <div className="inline-block px-4 py-2 bg-cyan-100 border border-cyan-400 rounded-full">
-              <p className="text-sm font-semibold text-teal-700">
+            <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-md border border-cyan-300/50 rounded-full">
+              <p className="text-sm font-semibold text-white">
                 🚀 Unlocking the Cosmos from Liberia
               </p>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-slate-900">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white drop-shadow-lg">
               Liberian Astronomical
               <br />
-              <span className="text-transparent bg-gradient-to-r from-teal-600 via-cyan-500 to-orange-500 bg-clip-text">
+              <span className="text-transparent bg-gradient-to-r from-cyan-200 via-cyan-100 to-orange-300 bg-clip-text">
                 Society
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow">
               Promoting astronomy education and engaging young Liberians in
               space science through workshops, outreach programs, and research
               initiatives.
@@ -288,13 +291,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <a
                 href="getinvolve.html"
-                className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-teal-400/40 hover:scale-105 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-teal-400/40 hover:scale-105 transition-all duration-300 backdrop-blur-sm"
               >
                 Get Involved
               </a>
               <a
                 href="#activities"
-                className="px-8 py-4 border-2 border-teal-500 text-teal-700 font-semibold rounded-full hover:bg-teal-50 hover:border-teal-600 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
               >
                 Explore Activities
               </a>
@@ -303,9 +306,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Activities Carousel Section */}
-      <section id="activities" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      {/* Activities Carousel Section with Pattern Background */}
+      <section
+        id="activities"
+        className="py-20 px-4 sm:px-6 lg:px-8 relative"
+        style={{
+          backgroundImage: `url('https://private-us-east-1.manuscdn.com/sessionFile/32ZuFWbSfwVMisoEWJT3nk/sandbox/Tdz799sqIzgcYWPPqqX3C4-img-2_1770660762000_na1fn_c2VjdGlvbi1zcGFjZS1wYXR0ZXJu.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMzJadUZXYlNmd1ZNaXNvRVdKVDNuay9zYW5kYm94L1Rkejc5OXNxSXpnY1lXUFBxcVgzQzQtaW1nLTJfMTc3MDY2MDc2MjAwMF9uYTFmbl9jMlZqZEdsdmJpMXpjR0ZqWlMxd1lYUjBaWEp1LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=UzU9oRAq7s8b7grcKDDvF6O540EwgGSKVlvDz1z-seGfel67OXQ8~i2pbpXTGBB1ZJjp1yHObBT1Yje9yGVOadQzUU25DhoteZMRMxzQXePG85uFJhoTjHGHMZ9Fo12YzUhY7IV18MvFdb-p224Eo-STjRNFiEtL8LbUsfcPyxUcN34l0Oe0h6GzNJh3DwB4UlR09aRGlLz4WpFcnk5kn2e8vCV6b9~MOFPj3QZ1zLVSquwFh02EieqIDHcMmR-GMdxGOgeLeudpcTXIBJFt8DObTTF3fT~Bkd-OY69yUNFWeyYSIrh1ikwp3uUzltXWWMMrdbG9hibj6H6Hq~GAlA__')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-white/85"></div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
               Our Activities
@@ -478,13 +493,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-teal-200 bg-slate-900 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      {/* Footer with Space Gradient Background */}
+      <footer
+        className="border-t border-teal-200 py-12 px-4 sm:px-6 lg:px-8 relative"
+        style={{
+          backgroundImage: `url('https://private-us-east-1.manuscdn.com/sessionFile/32ZuFWbSfwVMisoEWJT3nk/sandbox/Tdz799sqIzgcYWPPqqX3C4-img-3_1770660766000_na1fn_Zm9vdGVyLXNwYWNlLWdyYWRpZW50.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMzJadUZXYlNmd1ZNaXNvRVdKVDNuay9zYW5kYm94L1Rkejc5OXNxSXpnY1lXUFBxcVgzQzQtaW1nLTNfMTc3MDY2MDc2NjAwMF9uYTFmbl9abTl2ZEdWeUxYTndZV05sTFdkeVlXUnBaVzUwLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=g8W63I03CmapG~WUlysARxfH00cZqG~loev43A2JG4alMqIqL-ad5DWGZv53H3mLBBvXCwgh0t6e9NsL5z9IISIQmiZV-Oy5r0Aib0aylKjHUQHntYazIkge7L8BEufnne-6d3jvQZ4BExJvhcrviKGfx0F1trwH~p80ZpOKjp4KsdcFp33ZXC4Kicu~FTj7EJj-14RdXtCqPr6RBu4BQwSKSKx6YX~zYWnliQiLwUgLti~GeywUgnu32xQQYizSDset8ltOzJ~YBN4bBwjLAwJuMys0WbDVfJFkk5Z2O~oYdxxewDgDReUVkDHOqsEA7tb7LmCcnl40vk-pGNjekA__')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-slate-950/85"></div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-white font-bold mb-4">LAS</h3>
-              <p className="text-slate-400 text-sm">
+              <p className="text-slate-300 text-sm">
                 Promoting astronomy education across Liberia
               </p>
             </div>
@@ -515,7 +540,7 @@ export default function Home() {
               },
             ].map((col, idx) => (
               <div key={idx}>
-                <h4 className="text-slate-300 font-semibold mb-4">
+                <h4 className="text-slate-200 font-semibold mb-4">
                   {col.title}
                 </h4>
                 <ul className="space-y-2">
@@ -523,7 +548,7 @@ export default function Home() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-slate-400 hover:text-cyan-400 transition-colors text-sm"
+                        className="text-slate-400 hover:text-cyan-300 transition-colors text-sm"
                       >
                         {link.label}
                       </a>
